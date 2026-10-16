@@ -1,9 +1,14 @@
 import { ArrowRight, Clock3, Package, Play, Plus } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { RoutineBuilder } from "@/components/routine-builder";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { PRESETS } from "@/lib/presets";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const BENEFITS = [
   { icon: Package, title: "No equipment", body: "Your chair, your desk, maybe a wall. That's the whole kit." },
