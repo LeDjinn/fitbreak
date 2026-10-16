@@ -14,7 +14,11 @@ const SESSION = "/session?d=5&l=desk&f=full&i=gentle&s=0&v=0";
 async function shot(name, path, viewport, { full = false, clock = false, act } = {}) {
   const ctx = await browser.newContext({ viewport, deviceScaleFactor: 2 });
   const page = await ctx.newPage();
-  page.on("console", (m) => m.type() === "error" && problems.push(`${name}: ${m.text()}`));
+  page.on("console", (m) => {
+    // Vercel Analytics' script only exists on Vercel; a local 404 is expected.
+    if (m.location().url.includes("/_vercel/insights/")) return;
+    if (m.type() === "error") problems.push(`${name}: ${m.text()}`);
+  });
   page.on("pageerror", (e) => problems.push(`${name}: ${e.message}`));
   if (clock) await page.clock.install();
   await page.goto(base + path, { waitUntil: "networkidle" });

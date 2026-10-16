@@ -39,15 +39,26 @@ sparingly: CTAs, the live dot, timer progress. It shouldn't feel like a gym app,
 - **Start button near the fold.** At 1440×900 the form's Start button lands just below the fold,
   so a floating "Start my break" pill appears whenever the main button is off-screen while you're in
   the builder. On mobile it's a full-width bottom bar.
-- **Original illustrations.** There are 30 line-figure poses (`components/movement-illustration.tsx`),
+- **Original illustrations.** There are 30 movement figures (`components/movement-illustration.tsx`),
   tweened A → B → A with SMIL (no JS, and it works in Safari). They're static when you prefer reduced
-  motion, when paused, and in lists.
+  motion, when paused, and in lists. See "Illustration style" below.
 - **Session as its own focused page** (`/session`) instead of an overlay: a progress ring around the
   illustration, a large tabular timer, a "How to do it" step list, segmented overall progress,
   sticky thumb-reach controls on mobile, and a native `<dialog>` for "Leave this break?" (focus
   lands on the safe "Keep going").
 - **Completion:** an original celebratory figure, "Nice work. You're back.", Repeat / New break /
   Copy share link, plus an honest note if you skipped ahead. There are no fake stats.
+
+## Illustration style (v2, Oct 2026)
+One original character, drawn from a joint skeleton (`Pose`: head, neck, pelvis, elbows, hands,
+knees, ankles, toes). Each body part is a thick round-capped line or a circle, so any pose can tween.
+- **Palette:** skin `#E2A57F`, hair `#27303A`, shirt = mint-deep `#2C7658`, trousers `#1D3F3B`,
+  shoes `#F7F7F2`. Far-side limbs use deeper shades in side views. Front views (`view: "front"`)
+  get shoulder and hip width, with the same colours on both sides.
+- **Props:** mint-green filled chair (side, front, support) and wall; a soft floor shadow.
+- **Discs:** figures sit on mint `#CEF3DF` circles everywhere (preview, routine pages, player, completion).
+- **Adding a movement:** define poses `a` (and optionally `b`) and pick a view and props. No drawing
+  tools are needed, so it's easy to extend weekly.
 
 ## Component inventory
 `site-header`, `site-footer`, `brand` (mark + wordmark), `segmented-field` (+ `ToggleRow`),

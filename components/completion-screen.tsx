@@ -4,25 +4,26 @@ import { Check, Copy, RotateCcw, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { formatDuration } from "@/lib/session-clock";
+import { useReducedMotion } from "@/lib/use-reduced-motion";
+import { MovementIllustration } from "./movement-illustration";
 
 function Celebration() {
+  const reducedMotion = useReducedMotion();
   return (
-    <svg viewBox="0 0 200 200" className="size-40 sm:size-48" aria-hidden="true">
-      <circle cx="100" cy="100" r="92" fill="var(--color-lime)" opacity="0.12" />
-      <circle cx="100" cy="100" r="70" fill="var(--color-mint)" />
-      <g stroke="var(--color-lime)" strokeWidth="5" strokeLinecap="round" className="origin-center motion-safe:animate-[spin_24s_linear_infinite]">
-        {Array.from({ length: 12 }, (_, i) => {
-          const a = (i * Math.PI) / 6;
-          return <line key={i} x1={100 + Math.cos(a) * 80} y1={100 + Math.sin(a) * 80} x2={100 + Math.cos(a) * 90} y2={100 + Math.sin(a) * 90} />;
-        })}
-      </g>
-      <g stroke="var(--color-ink)" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none">
-        <path d="M100 80 L100 124" strokeWidth="8" />
-        <path d="M100 84 L80 70 L70 50 M100 84 L120 70 L130 50" />
-        <path d="M100 124 L89 156 M100 124 L111 156" />
-      </g>
-      <circle cx="100" cy="64" r="10" fill="var(--color-ink)" />
-    </svg>
+    <div className="relative size-40 sm:size-48" aria-hidden="true">
+      <svg viewBox="0 0 200 200" className="absolute inset-0 size-full">
+        <circle cx="100" cy="100" r="92" fill="var(--color-lime)" opacity="0.12" />
+        <g stroke="var(--color-lime)" strokeWidth="5" strokeLinecap="round" className="origin-center motion-safe:animate-[spin_24s_linear_infinite]">
+          {Array.from({ length: 12 }, (_, i) => {
+            const a = (i * Math.PI) / 6;
+            return <line key={i} x1={100 + Math.cos(a) * 80} y1={100 + Math.sin(a) * 80} x2={100 + Math.cos(a) * 90} y2={100 + Math.sin(a) * 90} />;
+          })}
+        </g>
+      </svg>
+      <div className="absolute inset-[15%] grid place-items-center rounded-full bg-mint">
+        <MovementIllustration illustrationKey="celebrate" animated={!reducedMotion} className="size-[86%]" />
+      </div>
+    </div>
   );
 }
 
