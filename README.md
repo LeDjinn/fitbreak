@@ -1,5 +1,9 @@
 # FitBreak by BestFitTips
 
+[![CI](https://github.com/LeDjinn/fitbreak/actions/workflows/ci.yml/badge.svg)](https://github.com/LeDjinn/fitbreak/actions/workflows/ci.yml)
+
+Live: https://fitbreak.vercel.app
+
 A free micro-movement break website. Choose 2, 5 or 10 minutes, where you are, what needs a reset
 and the pace, then press **Start my break** for a guided, exactly-timed session. No account, no
 equipment, no network services.
