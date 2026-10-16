@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitBreak by BestFitTips
 
-## Getting Started
+A free micro-movement break website. Choose 2, 5 or 10 minutes, where you are, what needs a reset
+and the pace, then press **Start my break** for a guided, exactly-timed session. No account, no
+equipment, no network services.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev            # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm build && pnpm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Checks
 
-## Learn More
+```bash
+pnpm typecheck      # next typegen + tsc --noEmit (strict)
+pnpm lint           # ESLint (next/core-web-vitals + typescript)
+pnpm test           # Vitest: generator + session clock (460 tests)
+pnpm test:e2e       # Playwright: builds, starts on :3200, desktop + mobile projects, incl. axe a11y scan
+                    # first run only: npx playwright install chromium
+```
 
-To learn more about Next.js, take a look at the following resources:
+Screenshots: start a production server on :3200, then `node scripts/screenshots.mjs screenshots`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How it's built
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js 16 App Router**, TypeScript strict, Tailwind CSS 4, Lucide icons. Cache Components on.
+- `lib/exercises.ts`: 30 hand-written, low-intensity movements with typed metadata.
+- `lib/routine-generator.ts`: deterministic generation (FNV-1a hash + mulberry32 PRNG seeded by
+  config + `variation`), hard constraints (location, seated-only, intensity), focus preference with
+  full-body fillers, gentle first and last moves, no back-to-back repeats, and self-validation.
+- `lib/session-clock.ts`: UI-independent clock on `performance.now()`. The redraw interval only reads it.
+- `lib/routine-params.ts`: compact, validated query strings (`/session?d=5&l=desk&f=full&i=gentle&s=0&v=0`).
+- `lib/preferences.ts`: last choices in `localStorage` (try/catch everywhere).
+- `lib/analytics.ts`: typed event contract with **no network calls**. Use `registerAnalyticsAdapter()`
+  to plug in a consent-compliant provider later.
 
-## Deploy on Vercel
+## Environment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+None required. When deploying, set `NEXT_PUBLIC_SITE_URL` to the verified production origin so
+`sitemap.xml`, `robots.txt` and canonical URLs are absolute and correct (it defaults to `http://localhost:3000`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Design rationale: `docs/design/DECISIONS.md`. Original brief: `docs/source/`.

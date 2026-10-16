@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ── Design tokens ─────────────────────────────────────────────────── */
+@theme {
+  --color-canvas: #f7f7f2;
+  --color-cream: #fcfaf5;
+  --color-paper: #ffffff;
+  --color-ink: #153532;
+  --color-ink-soft: #2b4a45;
+  --color-muted: #5b6f6b;
+  --color-subtle: #5f706a;
+  --color-stroke: #dfe7e1;
+  --color-stroke-strong: #c7d6cd;
+  --color-mint: #cef3df;
+  --color-mint-soft: #e8f6ec;
+  --color-mint-deep: #2c7658;
+  --color-leaf: #367556;
+  --color-lime: #d9f286;
+  --color-lime-deep: #c5e566;
+  --color-panel: #153532;
+  --color-panel-2: #1c4440;
+  --color-panel-3: #24524c;
+  --color-on-panel: #f3f8f2;
+  --color-on-panel-muted: #a9c6b8;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-display-face), var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --radius-card: 1.75rem;
+  --radius-control: 0.875rem;
+
+  --shadow-card: 0 1px 0 rgb(21 53 50 / 0.03), 0 24px 60px -24px rgb(21 53 50 / 0.18);
+  --shadow-panel: 0 30px 80px -30px rgb(21 53 50 / 0.55);
+
+  --animate-rise: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-fade: fade 0.35s ease both;
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Base ──────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-lime);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-leaf);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .on-dark :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: var(--color-lime);
+  }
+  button, [role="button"], label { -webkit-tap-highlight-color: transparent; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+  }
+  .tabular { font-variant-numeric: tabular-nums; }
+  .wrap {
+    width: min(1200px, 100% - 2rem);
+    margin-inline: auto;
+  }
+  @media (min-width: 640px) {
+    .wrap { width: min(1200px, 100% - 4rem); }
+  }
+  /* Soft concentric rings on the dark preview card. */
+  .panel-rings {
+    background:
+      radial-gradient(circle at 105% -10%, rgb(255 255 255 / 0.06) 0 22%, transparent 22.2%),
+      radial-gradient(circle at 105% -10%, rgb(255 255 255 / 0.035) 0 34%, transparent 34.2%),
+      radial-gradient(circle at 105% -10%, rgb(217 242 134 / 0.05) 0 46%, transparent 46.2%),
+      var(--color-panel);
+  }
+  .session-bg {
+    background:
+      radial-gradient(1200px 600px at 20% -10%, rgb(206 243 223 / 0.08), transparent 60%),
+      radial-gradient(900px 500px at 110% 110%, rgb(217 242 134 / 0.06), transparent 60%),
+      var(--color-panel);
+  }
+}
+
+/* Every animation is decorative; meaning never depends on it. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
