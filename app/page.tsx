@@ -45,7 +45,7 @@ const FAQ = [
   },
   {
     q: "Do you collect my data?",
-    a: "No account, no email, no health questions. Your last choices are saved in your own browser so they're ready next time, and you can reset them any time. Read the privacy page for the details.",
+    a: "No account, no email, no health questions, and no tracking cookies. Your last choices are saved in your own browser so they're ready next time, and you can reset them any time. We count visits anonymously and in aggregate. The privacy page has the details.",
   },
 ];
 

@@ -12,7 +12,7 @@ export default function PrivacyPage() {
     <ProsePage eyebrow="Privacy" title="Your break stays on your device.">
       <p>
         <strong>Short version:</strong> FitBreak doesn&apos;t need an account, doesn&apos;t ask for your email, and never asks about
-        your health, age or weight. There are no ads, no tracking cookies, and no third-party analytics.
+        your health, age or weight. There are no ads and no tracking cookies. We count visits in aggregate (see Analytics below).
       </p>
       <h2>What we store, and where</h2>
       <p>
@@ -28,14 +28,20 @@ export default function PrivacyPage() {
         </li>
       </ul>
       <p>
-        Nothing is sent to us. You can also clear it at any time by clearing this site&apos;s data in your browser settings. A break in
+        These choices aren&apos;t sent to us. You can also clear them at any time by clearing this site&apos;s data in your browser settings. A break in
         progress isn&apos;t saved. If you refresh in the middle of one, it starts again.
       </p>
       <h2>Analytics</h2>
       <p>
-        Right now FitBreak doesn&apos;t connect to any analytics service. If we add privacy-friendly, aggregate analytics later, this
-        page will be updated first. It would only ever count things like &ldquo;a 5-minute break was started&rdquo;, never who
-        started it, and never any health information.
+        We use <strong>Vercel Web Analytics</strong> to count visits in aggregate: which pages are viewed, roughly where visitors
+        come from (country, referring site) and what kind of device they use. It uses no third-party cookies and stores nothing on
+        your device. Vercel recognises a visit by a hash of the incoming request, and discards it after 24 hours. We never see who you
+        are.
+      </p>
+      <p>
+        When you start a break, the visit to the session page includes your break settings (for example a 5-minute desk break),
+        so we can see which breaks are popular. Nothing else from the address is kept. We don&apos;t record your name, email or
+        IP address, or any health information.
       </p>
       <h2>Share links</h2>
       <p>

@@ -1,11 +1,13 @@
 import type { Focus, Intensity, Location } from "./types";
 
 /**
- * Analytics contract. No network calls by default.
+ * Analytics contract for product events.
  *
  * Events carry only coarse, non-identifying metadata. No user IDs, no health
- * data, no free text. To connect a consent-compliant provider later, call
- * `registerAnalyticsAdapter()` once on the client after consent is given.
+ * data, no free text. Page views go to Vercel Web Analytics (cookieless) via
+ * `components/site-analytics.tsx`. Product events below are forwarded there too
+ * only when NEXT_PUBLIC_ANALYTICS_CUSTOM_EVENTS=on (needs Vercel Pro);
+ * otherwise they stay in this tab's local buffer.
  *
  * Note: the built-in buffer is local to one browser tab. It is NOT cross-user
  * traffic data and must never be reported as such.
