@@ -43,12 +43,13 @@ Screenshots: start a production server on :3200, then `node scripts/screenshots.
 - `lib/session-clock.ts`: UI-independent clock on `performance.now()`. The redraw interval only reads it.
 - `lib/routine-params.ts`: compact, validated query strings (`/session?d=5&l=desk&f=full&i=gentle&s=0&v=0`).
 - `lib/preferences.ts`: last choices in `localStorage` (try/catch everywhere).
-- `lib/analytics.ts`: typed event contract with **no network calls**. Use `registerAnalyticsAdapter()`
-  to plug in a consent-compliant provider later.
+- `lib/analytics.ts`: typed product-event contract. `components/site-analytics.tsx` sends cookieless page
+  views to Vercel Web Analytics (unknown URL params stripped). Product events (completed, paused, …) are
+  forwarded only if `NEXT_PUBLIC_ANALYTICS_CUSTOM_EVENTS=on`, which needs Vercel Pro.
 
 ## Environment
 
-None required. When deploying, set `NEXT_PUBLIC_SITE_URL` to the verified production origin so
+None required locally. Optional: `NEXT_PUBLIC_ANALYTICS_CUSTOM_EVENTS=on` (Vercel Pro only). When deploying, set `NEXT_PUBLIC_SITE_URL` to the verified production origin so
 `sitemap.xml`, `robots.txt` and canonical URLs are absolute and correct (it defaults to `http://localhost:3000`).
 
 Design rationale: `docs/design/DECISIONS.md`.

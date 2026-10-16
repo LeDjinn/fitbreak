@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Suspense } from "react";
+import { SiteAnalytics } from "@/components/site-analytics";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -51,6 +53,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         {children}
+        <Suspense fallback={null}>
+          <SiteAnalytics />
+        </Suspense>
       </body>
     </html>
   );
