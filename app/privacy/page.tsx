@@ -43,6 +43,13 @@ export default function PrivacyPage() {
         so we can see which breaks are popular. Nothing else from the address is kept. We don&apos;t record your name, email or
         IP address, or any health information.
       </p>
+      <h2>Error reports</h2>
+      <p>
+        If something breaks, an automatic error report is sent to <strong>Rollbar</strong>, our error-tracking service, so we can
+        fix it. A report contains the technical error, the page it happened on (with the same address clean-up as above), your
+        browser type and the app version. It doesn&apos;t include your IP address, anything you clicked or typed, or anything else that
+        identifies you.
+      </p>
       <h2>Share links</h2>
       <p>
         A share link only contains your break settings, such as <code className="rounded bg-mint-soft px-1.5 py-0.5 text-sm text-ink">d=5&amp;l=desk</code>. It
