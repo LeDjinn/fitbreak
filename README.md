@@ -48,3 +48,12 @@ None required. When deploying, set `NEXT_PUBLIC_SITE_URL` to the verified produc
 `sitemap.xml`, `robots.txt` and canonical URLs are absolute and correct (it defaults to `http://localhost:3000`).
 
 Design rationale: `docs/design/DECISIONS.md`. Original brief: `docs/source/`.
+
+## Deploys
+
+Hosted on Vercel (`ledjinns-projects/fitbreak`), connected to `github.com/LeDjinn/fitbreak`:
+
+- push to `main` → production deploy at https://fitbreak.vercel.app
+- push any other branch / open a PR → preview deploy with its own URL
+
+Smoke-test a deployment: `PLAYWRIGHT_BASE_URL=<url> pnpm test:e2e`.
