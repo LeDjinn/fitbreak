@@ -18,7 +18,8 @@
     "lucide-react": "^1.58.0",
     "next": "16.4.2",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "rollbar": "^4.0.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",

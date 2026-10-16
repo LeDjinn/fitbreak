@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
 import { Suspense } from "react";
+import { ErrorReporting } from "@/components/error-reporting";
 import { SiteAnalytics } from "@/components/site-analytics";
 import "./globals.css";
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Suspense fallback={null}>
           <SiteAnalytics />
         </Suspense>
+        <ErrorReporting />
       </body>
     </html>
   );

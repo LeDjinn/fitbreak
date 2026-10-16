@@ -4,25 +4,10 @@ import { track as vercelTrack } from "@vercel/analytics";
 import { Analytics, type BeforeSendEvent } from "@vercel/analytics/next";
 import { useEffect } from "react";
 import { registerAnalyticsAdapter } from "@/lib/analytics";
-
-/** Only routine settings may leave the browser in a URL; anything else a visitor adds is dropped. */
-const ALLOWED_PARAMS = new Set(["d", "l", "f", "i", "s", "p"]);
+import { privateUrl } from "@/lib/url-privacy";
 
 export function cleanUrl(event: BeforeSendEvent): BeforeSendEvent {
-  try {
-    const url = new URL(event.url);
-    const kept = new URLSearchParams();
-    if (url.pathname === "/session") {
-      url.searchParams.forEach((value, key) => {
-        if (ALLOWED_PARAMS.has(key)) kept.set(key, value);
-      });
-    }
-    url.search = kept.toString();
-    url.hash = "";
-    return { ...event, url: url.toString() };
-  } catch {
-    return event;
-  }
+  return { ...event, url: privateUrl(event.url) };
 }
 
 /**
