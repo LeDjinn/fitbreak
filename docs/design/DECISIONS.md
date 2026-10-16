@@ -1,6 +1,6 @@
 # FitBreak: design decisions
 
-Starting point: `docs/source/fitbreak_design_preview.html` (kept as a reference, not shipped).
+Starting point: a self-contained HTML design preview from the project brief (kept privately, not in this repo).
 Goal: keep its core idea, a refined editorial page built around a large configurator and a live
 dark preview, and turn it into a real component system that is accessible and works on phones.
 

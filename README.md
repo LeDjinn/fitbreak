@@ -47,7 +47,7 @@ Screenshots: start a production server on :3200, then `node scripts/screenshots.
 None required. When deploying, set `NEXT_PUBLIC_SITE_URL` to the verified production origin so
 `sitemap.xml`, `robots.txt` and canonical URLs are absolute and correct (it defaults to `http://localhost:3000`).
 
-Design rationale: `docs/design/DECISIONS.md`. Original brief: `docs/source/`.
+Design rationale: `docs/design/DECISIONS.md`.
 
 ## Deploys
 
