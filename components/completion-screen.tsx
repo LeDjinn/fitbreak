@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { formatDuration } from "@/lib/session-clock";
 import { useReducedMotion } from "@/lib/use-reduced-motion";
+import { ExerciseArt } from "./exercise-art";
 import { MovementIllustration } from "./movement-illustration";
 
 function Celebration() {
@@ -21,7 +22,12 @@ function Celebration() {
         </g>
       </svg>
       <div className="absolute inset-[15%] grid place-items-center rounded-full bg-mint">
-        <MovementIllustration illustrationKey="celebrate" animated={!reducedMotion} className="size-[86%]" />
+        {/* The animated line figure stays the default; the still replaces only the motionless version. */}
+        {reducedMotion ? (
+          <ExerciseArt illustrationKey="celebrate" sizes="135px" fallbackClassName="size-[86%]" />
+        ) : (
+          <MovementIllustration illustrationKey="celebrate" animated className="size-[86%]" />
+        )}
       </div>
     </div>
   );
