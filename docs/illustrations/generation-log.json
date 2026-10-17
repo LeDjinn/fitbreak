@@ -1,0 +1,220 @@
+[
+ {
+  "slug": "style-reference-v1",
+  "attempt": 1,
+  "tool": "generate_image recraftv4_1_raster",
+  "credits": 2,
+  "status": "superseded",
+  "reason": "Longer bob-like hair; replaced by canonical sheet",
+  "url": "https://img.recraft.ai/4g4jde9FT9oud3Uk6QfDf0Ju62WuoivYAFhpmiq0WzE/raw:1/plain/abs://prod/images/dc7474e8-b326-4858-bd9c-f648d90a1ed7"
+ },
+ {
+  "slug": "shoulder-rolls",
+  "attempt": 1,
+  "tool": "generate_image style v1",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "Front view instead of side; head turned; shoulders not raised",
+  "url": "https://img.recraft.ai/LqwXj0Az49i8Y5shsBWh_USuddd4t2PrzesVclKUkKA/raw:1/plain/abs://prod/images/92e63b41-f6a3-488a-89ac-3f4b624762a5"
+ },
+ {
+  "slug": "chin-glide",
+  "attempt": 1,
+  "tool": "generate_image style v1",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "Double-headed arrow pointing forward; no visible chin tuck. Not retried: a still image cannot show this safely",
+  "url": "https://img.recraft.ai/60nQFbbX62Pp_RFH2R9ztwlwS25uiRPjYNrJAiNS_z0/raw:1/plain/abs://prod/images/816ed536-cecb-4c8f-bfce-eae721770fba"
+ },
+ {
+  "slug": "mini-squat",
+  "attempt": 1,
+  "tool": "generate_image style v1",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "Stray arrow above head; minimal hip hinge",
+  "url": "https://img.recraft.ai/qHrZ28T_ugY7NiIAxLMzk8a9M_TKaLG-iOI6rl6zZMI/raw:1/plain/abs://prod/images/5dd0f156-b693-44e0-996b-cc0fe0e87513"
+ },
+ {
+  "slug": "character-reference",
+  "attempt": 1,
+  "tool": "image_edit nano_banana_2 (from 3 pilot images)",
+  "credits": 11,
+  "status": "accepted",
+  "reason": "Four views, same short-haired man; used to build style v2",
+  "url": "https://img.recraft.ai/PHRvTOSEwzZWy_eHbcMQGHiAtyWPQWdK6T3ROom8L4A/raw:1/plain/abs://prod/images/4f3eee12-804b-42f8-abf6-2c0d1733b16b"
+ },
+ {
+  "slug": "shoulder-rolls",
+  "attempt": 2,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "flag": "Shrug is subtle; the arrow carries the movement",
+  "url": "https://img.recraft.ai/LFHxf07fxXhCWcWq9kk62PtKrGCxvwpG8lHZaYQLUew/raw:1/plain/abs://prod/images/804967ac-dbbe-4dfa-9bbf-ea64368b44dc"
+ },
+ {
+  "slug": "mini-squat",
+  "attempt": 2,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "flag": "Shallow knee bend with little backward hip hinge",
+  "url": "https://img.recraft.ai/IHcvn_mzkvopXGtDlHlP_EW_dCpYH6pv97Y8ugsYVgs/raw:1/plain/abs://prod/images/98352f03-6be9-46cc-bce2-9461988458b6"
+ },
+ {
+  "slug": "seated-march",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "Both feet on the floor; no knee lift",
+  "url": "https://img.recraft.ai/heB-ByR2g3ImDTugQV3wPnrtAxCwyEDy2KOMx9qg6oQ/raw:1/plain/abs://prod/images/c05834b8-5e19-4b2b-a1c7-81b858cbdb51"
+ },
+ {
+  "slug": "seated-march",
+  "attempt": 2,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "flag": "Chair drawn tall like a bar stool; planted leg looks long",
+  "url": "https://img.recraft.ai/fbeE28QQ18quOFLRbKWnoJ_rbm45euLcyEr596HEEwA/raw:1/plain/abs://prod/images/f373b95c-f691-4e59-a638-233991a0b70c"
+ },
+ {
+  "slug": "standing-reach",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "url": "https://img.recraft.ai/y2qz1Q4rRpywAnypB1Ysauz-qAQbeUFtrWzNO_k-Kl8/raw:1/plain/abs://prod/images/8a905fc7-a7e4-4a50-82a7-197a4c5a29ff"
+ },
+ {
+  "slug": "celebrate",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "url": "https://img.recraft.ai/_SJjkVXwGwPtn_EUeLjZwabxjNVXhHIBmc-RXnbSy7A/raw:1/plain/abs://prod/images/511bf2ea-680d-4192-8f8b-cebee38343f2"
+ },
+ {
+  "slug": "calf-raise",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "Heels stay flat on the floor",
+  "url": "https://img.recraft.ai/AvqPgDYPvT3hIWoM35wSWStbSbB4xdasTu2FyEuhPxc/raw:1/plain/abs://prod/images/d0b60e91-af65-40af-b626-6fc84835a532"
+ },
+ {
+  "slug": "wall-push",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "No wall drawn; hips back and knees bent instead of a straight body line",
+  "url": "https://img.recraft.ai/yjPFXU3ZUvTcZoFioTB-9nlKXFY_c5N709yQnpcjrPA/raw:1/plain/abs://prod/images/c3c6e41f-91ce-4a68-8bdc-bfd919918873"
+ },
+ {
+  "slug": "sit-to-stand",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "url": "https://img.recraft.ai/kJMCVPrRB-EKwON22elzBS8p7q-xXFvW2kw4eYJNjqA/raw:1/plain/abs://prod/images/25228920-574e-47db-8a74-edcbc33c55a9"
+ },
+ {
+  "slug": "chest-opener",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "url": "https://img.recraft.ai/PaqrgjiYvXhp6SLzNPNakUrU46UYp3QC3yUBgbcpZ7o/raw:1/plain/abs://prod/images/c4f1fa57-1fc2-4c08-af59-6fbf8d253654"
+ },
+ {
+  "slug": "seated-overhead-reach",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "url": "https://img.recraft.ai/Lax5SLv4EW1OkFuwGKb8a3db2vHmoeZnLf75PAGCYNQ/raw:1/plain/abs://prod/images/7d0dd7ce-b905-480d-9965-6d5a799e450d"
+ },
+ {
+  "slug": "seated-side-reach",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "flag": "Arm arcs overhead but the torso barely leans",
+  "url": "https://img.recraft.ai/ifTIfmYp17SCe3Fkp0lCjwQaAx5IqWqEd8f5jmr0jqg/raw:1/plain/abs://prod/images/ab8228b5-bd1a-461c-81d4-a81314203ecb"
+ },
+ {
+  "slug": "standing-side-reach",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "flag": "Arm overhead but the torso stays vertical",
+  "url": "https://img.recraft.ai/-VMuB8lCb42Mr2qox0nznNDItYE8-3TA7GFdf358UKU/raw:1/plain/abs://prod/images/bc6d3c44-261c-42ab-9c74-1e6791d0a29f"
+ },
+ {
+  "slug": "knee-extension",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "No foot on the floor; reads as both legs lifted",
+  "url": "https://img.recraft.ai/neEWBjIqVl-PTK9GnsbR5Y0dbCCgvmNRjUN2W6hXhvc/raw:1/plain/abs://prod/images/01736b76-a50b-444f-a38e-93b9b8ca12d4"
+ },
+ {
+  "slug": "forward-reach",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "url": "https://img.recraft.ai/peRcOhzfVwyprel5Eafm3nmjrprYDQxW8vN6wHlY17c/raw:1/plain/abs://prod/images/e154e720-d660-488d-89e9-188109d8ddf0"
+ },
+ {
+  "slug": "march-arms",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "One hand rests on the chest instead of an arm swing",
+  "url": "https://img.recraft.ai/Z7iVzx3Z4S19FjRz8sStKLtJsvc4p0pAYKcmEZupOo0/raw:1/plain/abs://prod/images/1444c7cc-f80b-49f0-b433-4909bab7a4b1"
+ },
+ {
+  "slug": "breathing",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "url": "https://img.recraft.ai/7MW1N4HUkxNSsg4-aN2bcj9OlQ5cx-HWnr0Yd6rT_6I/raw:1/plain/abs://prod/images/0f04c7f6-bc54-422d-a287-169445b3dbaa"
+ },
+ {
+  "slug": "shoulder-squeeze",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "Only one elbow drawn back; the other arm reaches forward",
+  "url": "https://img.recraft.ai/6wgmB0TZG9-XZ5-yKnuFlkQ1mlmc-5GnRWaHSLxZgN0/raw:1/plain/abs://prod/images/261455dd-4135-46ed-824d-96ea8e50dedc"
+ },
+ {
+  "slug": "step-touch",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "rejected",
+  "reason": "Reads as a forward walking stride, not a side step",
+  "url": "https://img.recraft.ai/5a42nY5-TtKZGYsbjBn6I6jBsDnugYkON6ZQz1o74jA/raw:1/plain/abs://prod/images/1bd224b2-f813-4a70-99b8-763dda3158b9"
+ },
+ {
+  "slug": "seated-rotation",
+  "attempt": 1,
+  "tool": "generate_image style v2",
+  "credits": 2,
+  "status": "accepted",
+  "flag": "Rotation shown mostly by the head; torso turn is slight",
+  "url": "https://img.recraft.ai/oyMTwxuJV90ya1NASX_FIWp8wstb2bzqQai30Ot1Ukk/raw:1/plain/abs://prod/images/244db7d8-acd9-40ff-946d-ec76ddbc2377"
+ }
+]

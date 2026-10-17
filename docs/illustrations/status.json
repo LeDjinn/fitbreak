@@ -1,0 +1,250 @@
+[
+ {
+  "slug": "shoulder-rolls",
+  "setting": "seated",
+  "view": "side",
+  "state": "flagged",
+  "note": "Shrug is subtle; the arrow carries the movement",
+  "tries": 2
+ },
+ {
+  "slug": "shoulder-squeeze",
+  "setting": "seated",
+  "view": "side",
+  "state": "rejected",
+  "note": "Only one elbow drawn back; the other arm reaches forward",
+  "tries": 1
+ },
+ {
+  "slug": "seated-rotation",
+  "setting": "seated",
+  "view": "three-quarter",
+  "state": "flagged",
+  "note": "Rotation shown mostly by the head; torso turn is slight",
+  "tries": 1
+ },
+ {
+  "slug": "wrist-circles",
+  "setting": "seated",
+  "view": "side",
+  "state": "missing",
+  "note": "Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).",
+  "tries": 0
+ },
+ {
+  "slug": "hand-openers",
+  "setting": "seated",
+  "view": "front",
+  "state": "missing",
+  "note": "Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).",
+  "tries": 0
+ },
+ {
+  "slug": "neck-tilt",
+  "setting": "seated",
+  "view": "front",
+  "state": "missing",
+  "note": "Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).",
+  "tries": 0
+ },
+ {
+  "slug": "chin-glide",
+  "setting": "seated",
+  "view": "side",
+  "state": "rejected",
+  "note": "Double-headed arrow pointing forward; no visible chin tuck. Not retried: a still image cannot show this safely",
+  "tries": 1
+ },
+ {
+  "slug": "seated-side-reach",
+  "setting": "seated",
+  "view": "front",
+  "state": "flagged",
+  "note": "Arm arcs overhead but the torso barely leans",
+  "tries": 1
+ },
+ {
+  "slug": "seated-cat-cow",
+  "setting": "seated",
+  "view": "side",
+  "state": "missing",
+  "note": "Not generated: Recraft credits ran out.",
+  "tries": 0
+ },
+ {
+  "slug": "seated-overhead-reach",
+  "setting": "seated",
+  "view": "front",
+  "state": "approved",
+  "note": "Matches the movement description and the reference character.",
+  "tries": 1
+ },
+ {
+  "slug": "arm-circles",
+  "setting": "seated",
+  "view": "front",
+  "state": "missing",
+  "note": "Not generated: Recraft credits ran out.",
+  "tries": 0
+ },
+ {
+  "slug": "forward-reach",
+  "setting": "seated",
+  "view": "side",
+  "state": "approved",
+  "note": "Matches the movement description and the reference character.",
+  "tries": 1
+ },
+ {
+  "slug": "seated-march",
+  "setting": "seated",
+  "view": "side",
+  "state": "review",
+  "note": "Pose correct (knee lifted) but the chair is drawn as a tall bar stool and the planted leg is nearly straight; reads as perching, not sitting. Kept out of the app.",
+  "tries": 2
+ },
+ {
+  "slug": "seated-heel-raise",
+  "setting": "seated",
+  "view": "side",
+  "state": "missing",
+  "note": "Not generated: Recraft credits ran out.",
+  "tries": 0
+ },
+ {
+  "slug": "knee-extension",
+  "setting": "seated",
+  "view": "side",
+  "state": "rejected",
+  "note": "No foot on the floor; reads as both legs lifted",
+  "tries": 1
+ },
+ {
+  "slug": "ankle-circles",
+  "setting": "seated",
+  "view": "side",
+  "state": "missing",
+  "note": "Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).",
+  "tries": 0
+ },
+ {
+  "slug": "toe-taps",
+  "setting": "seated",
+  "view": "side",
+  "state": "missing",
+  "note": "Not generated: Recraft credits ran out.",
+  "tries": 0
+ },
+ {
+  "slug": "breathing",
+  "setting": "seated",
+  "view": "front",
+  "state": "approved",
+  "note": "Matches the movement description and the reference character.",
+  "tries": 1
+ },
+ {
+  "slug": "weight-shift",
+  "setting": "standing",
+  "view": "front",
+  "state": "missing",
+  "note": "Not generated: Recraft credits ran out.",
+  "tries": 0
+ },
+ {
+  "slug": "standing-reach",
+  "setting": "standing",
+  "view": "side",
+  "state": "approved",
+  "note": "Matches the movement description and the reference character.",
+  "tries": 1
+ },
+ {
+  "slug": "standing-side-reach",
+  "setting": "standing",
+  "view": "front",
+  "state": "flagged",
+  "note": "Arm overhead but the torso stays vertical",
+  "tries": 1
+ },
+ {
+  "slug": "chest-opener",
+  "setting": "standing",
+  "view": "front",
+  "state": "approved",
+  "note": "Matches the movement description and the reference character.",
+  "tries": 1
+ },
+ {
+  "slug": "calf-raise",
+  "setting": "standing",
+  "view": "side",
+  "state": "rejected",
+  "note": "Heels stay flat on the floor",
+  "tries": 1
+ },
+ {
+  "slug": "standing-march",
+  "setting": "standing",
+  "view": "side",
+  "state": "missing",
+  "note": "Not generated: Recraft credits ran out.",
+  "tries": 0
+ },
+ {
+  "slug": "sit-to-stand",
+  "setting": "standing",
+  "view": "side",
+  "state": "approved",
+  "note": "Matches the movement description and the reference character.",
+  "tries": 1
+ },
+ {
+  "slug": "wall-push",
+  "setting": "standing",
+  "view": "side",
+  "state": "rejected",
+  "note": "No wall drawn; hips back and knees bent instead of a straight body line",
+  "tries": 1
+ },
+ {
+  "slug": "step-touch",
+  "setting": "standing",
+  "view": "front",
+  "state": "rejected",
+  "note": "Reads as a forward walking stride, not a side step",
+  "tries": 1
+ },
+ {
+  "slug": "hip-circles",
+  "setting": "standing",
+  "view": "front",
+  "state": "missing",
+  "note": "Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).",
+  "tries": 0
+ },
+ {
+  "slug": "mini-squat",
+  "setting": "standing",
+  "view": "side",
+  "state": "flagged",
+  "note": "Shallow knee bend with little backward hip hinge",
+  "tries": 2
+ },
+ {
+  "slug": "march-arms",
+  "setting": "standing",
+  "view": "front",
+  "state": "rejected",
+  "note": "One hand rests on the chest instead of an arm swing",
+  "tries": 1
+ },
+ {
+  "slug": "celebrate",
+  "setting": "completion",
+  "view": "front",
+  "state": "approved",
+  "note": "Matches the movement description and the reference character.",
+  "tries": 1
+ }
+]

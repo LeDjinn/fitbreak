@@ -1,0 +1,19 @@
+shoulder-squeeze.png	rejected	Only one elbow drawn back; the other arm reaches forward
+wrist-circles.png	missing	Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).
+hand-openers.png	missing	Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).
+neck-tilt.png	missing	Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).
+chin-glide.png	rejected	Double-headed arrow pointing forward; no visible chin tuck. Not retried: a still image cannot show this safely
+seated-cat-cow.png	missing	Not generated: Recraft credits ran out.
+arm-circles.png	missing	Not generated: Recraft credits ran out.
+seated-march.png	review	Pose correct (knee lifted) but the chair is drawn as a tall bar stool and the planted leg is nearly straight; reads as perching, not sitting. Kept out of the app.
+seated-heel-raise.png	missing	Not generated: Recraft credits ran out.
+knee-extension.png	rejected	No foot on the floor; reads as both legs lifted
+ankle-circles.png	missing	Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).
+toe-taps.png	missing	Not generated: Recraft credits ran out.
+weight-shift.png	missing	Not generated: Recraft credits ran out.
+calf-raise.png	rejected	Heels stay flat on the floor
+standing-march.png	missing	Not generated: Recraft credits ran out.
+wall-push.png	rejected	No wall drawn; hips back and knees bent instead of a straight body line
+step-touch.png	rejected	Reads as a forward walking stride, not a side step
+hip-circles.png	missing	Not generated: a single still cannot show this movement safely (instructions allow leaving it for review).
+march-arms.png	rejected	One hand rests on the chest instead of an arm swing
