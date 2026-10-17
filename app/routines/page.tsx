@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { MovementIllustration } from "@/components/movement-illustration";
+import { ExerciseArt } from "@/components/exercise-art";
 import { getExercise } from "@/lib/exercises";
 import { PRESETS } from "@/lib/presets";
 import { generateRoutine } from "@/lib/routine-generator";
@@ -64,7 +64,7 @@ export default function RoutinesPage() {
                   <div className="flex gap-2" aria-hidden="true">
                     {first.map((e, i) => (
                       <span key={`${e.id}-${i}`} className="grid size-16 place-items-center rounded-2xl bg-mint text-ink sm:size-20">
-                        <MovementIllustration illustrationKey={e.illustrationKey} className="size-[88%]" />
+                        <ExerciseArt illustrationKey={e.illustrationKey} sizes="80px" fallbackClassName="size-[88%]" />
                       </span>
                     ))}
                   </div>

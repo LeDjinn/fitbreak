@@ -5,7 +5,7 @@ import { getExercise } from "@/lib/exercises";
 import { ROUTINE_TITLE } from "@/lib/routine-params";
 import { formatClock } from "@/lib/session-clock";
 import type { GeneratedRoutine } from "@/lib/types";
-import { MovementIllustration } from "./movement-illustration";
+import { ExerciseArt } from "./exercise-art";
 
 export function RoutinePreview({
   routine,
@@ -75,7 +75,7 @@ export function RoutinePreview({
               style={{ animationDelay: `${index * 35}ms` }}
             >
               <span className="relative grid size-10 shrink-0 place-items-center rounded-[0.6rem] bg-mint text-ink">
-                <MovementIllustration illustrationKey={exercise.illustrationKey} className="size-9" />
+                <ExerciseArt illustrationKey={exercise.illustrationKey} sizes="40px" fallbackClassName="size-9" />
                 <span className="tabular absolute -top-1 -left-1 grid size-[1.125rem] place-items-center rounded-full bg-lime text-[0.625rem] font-bold text-ink">
                   {index + 1}
                 </span>

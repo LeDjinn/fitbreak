@@ -1,6 +1,6 @@
 import { getExercise } from "@/lib/exercises";
 import type { GeneratedRoutine } from "@/lib/types";
-import { MovementIllustration } from "./movement-illustration";
+import { ExerciseArt } from "./exercise-art";
 
 /** Server-rendered, full routine with steps — used on preset pages. */
 export function RoutineStepList({ routine }: { routine: GeneratedRoutine }) {
@@ -11,7 +11,7 @@ export function RoutineStepList({ routine }: { routine: GeneratedRoutine }) {
         return (
           <li key={step.id} className="flex gap-4 rounded-3xl border border-stroke bg-cream p-4 sm:p-5">
             <div className="relative grid size-20 shrink-0 place-items-center rounded-2xl bg-mint text-ink sm:size-24">
-              <MovementIllustration illustrationKey={e.illustrationKey} className="size-[88%]" />
+              <ExerciseArt illustrationKey={e.illustrationKey} sizes="96px" fallbackClassName="size-[88%]" />
               <span className="tabular absolute -top-1.5 -left-1.5 grid size-6 place-items-center rounded-full bg-ink text-xs font-bold text-lime">
                 {index + 1}
               </span>
